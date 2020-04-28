@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> My Website! </title>
+    <style type = "text/css">
+     h1{
+       height: 50px;
+       background-color: #cccccc;
+       background-image: linear-gradient(red, yellow, green);
+     }
+   </style>
+  </head>
+  <body>
+    <h1> HELLO BUDDYYY !</h1>
+
+    <div> {{ errorr }} </div>
+
+  <form action="{{ url_for('hello') }}" method = "post">
+    <input type ="text" name = "name" placeholder="Enter your name">
+    <input type = "date" id = "start" name = "date" value = "2020-07-27"
+    max = "2021-12-12">
+    <button>Submit</button>
+  </form>
+  </body>
+</html>

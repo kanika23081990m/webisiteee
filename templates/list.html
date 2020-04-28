@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> H'BDAY </title>
+    <style type = "text/css">
+     body {
+     background-image: url("pic.png");
+     background-color: #cccccc;
+     }
+     h1{
+       height: 50px;
+       background-color: #cccccc;
+       background-image: linear-gradient(red, yellow, green);
+     }
+     ul, li {
+     background-color: white;
+     background-color: rgba(255, 255, 255, .85);
+     }
+   </style>
+  </head>
+  <body>
+    <h1> You can create a list of people who is wishing you today :D</h1>
+    <ul>
+      {% for n in notes %}
+        <li>{{ n }}</li>
+      {% endfor %}
+    </ul>
+
+      <form action="{{ url_for('list') }}" method = "post">
+        <input type ="text" name = "note" placeholder="Enter the person's name who wished you.">
+        <button>Add Note</button>
+      </form>
+  </body>
+</html>
